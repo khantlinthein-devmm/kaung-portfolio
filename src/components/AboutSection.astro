@@ -1,0 +1,85 @@
+---
+// Customize these details
+const skills = [
+  "HTML & CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Node.js",
+  "Astro",
+  "UI/UX Design",
+  "Responsive Design"
+];
+---
+
+<section id="about" class="about">
+  <h2 class="section-title">About Me</h2>
+  
+  <div class="content">
+    <div class="bio">
+      <p>
+        Hello! I'm a passionate web developer with over 5 years of experience building modern, 
+        responsive websites and applications. I specialize in front-end development with a 
+        focus on creating intuitive and engaging user experiences.
+      </p>
+      <p>
+        My journey in web development began when I built my first website in college. 
+        Since then, I've worked with various companies and clients to bring their digital 
+        visions to life. I'm constantly learning new technologies and techniques to stay 
+        current in this ever-evolving field.
+      </p>
+      <p>
+        When I'm not coding, you can find me hiking local trails, experimenting with new recipes, 
+        or reading science fiction novels.
+      </p>
+    </div>
+    
+    <div class="skills">
+      <h3>Skills & Technologies</h3>
+      <div class="skills-grid">
+        {skills.map(skill => (
+          <div class="skill-tag">{skill}</div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+  }
+
+  .bio p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .skills h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .skill-tag {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
