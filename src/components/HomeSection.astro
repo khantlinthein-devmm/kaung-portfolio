@@ -1,15 +1,16 @@
 ---
 // You can customize these details
-const name = "Kaung Set Khant Myint Thien";
-const title = "Director ";
-const description = "I build elegant, responsive websites with modern technologies.";
+const name = "Kaung Set Khant Myint Thein";
+const title = "Director of";
+const work = "Sports World Super Sport Trading Company "
+const description = "I build strategic partnerships and lead business development in the sports industry.";
 ---
 
 <section id="home" class="home">
   <div class="container">
     <div class="content">
       <h1 class="name">{name}</h1>
-      <h2 class="title">{title}</h2>
+      <h2 class="title">{title} <span class="work">{work}</span></h2>
       <p class="description">{description}</p>
       <div class="cta">
         <a href="#contact" class="btn primary">Get In Touch</a>
@@ -17,7 +18,7 @@ const description = "I build elegant, responsive websites with modern technologi
       </div>
     </div>
     <div class="image">
-      <img src="/assets/profile-pic.jpg" alt={name} />
+      <img src="/assets/images/profile.jpg" alt={name} />
     </div>
   </div>
 </section>
@@ -51,6 +52,12 @@ const description = "I build elegant, responsive websites with modern technologi
     color: var(--primary-color);
     font-weight: 500;
     margin-bottom: 1.5rem;
+  }
+
+  .work {
+    font-size : 1.5rem;
+    color : black;
+    font-weight  : 600;
   }
 
   .description {
@@ -96,7 +103,7 @@ const description = "I build elegant, responsive websites with modern technologi
 
   .image img {
     max-width: 350px;
-    border-radius: 50%;
+    border-radius: 10%;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
 
